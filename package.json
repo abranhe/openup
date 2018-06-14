@@ -1,0 +1,24 @@
+{
+  "name": "openup",
+  "version": "0.0.1",
+  "description": "Open anything on your favorite editor",
+  "main": "cli.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/19cah/openup.git"
+  },
+  "keywords": [
+    "open",
+    "openup",
+    "open-anything"
+  ],
+  "author": "Carlos Abraham <abraham@19cah.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/19cah/openup/issues"
+  },
+  "homepage": "https://github.com/19cah/openup#readme"
+}
