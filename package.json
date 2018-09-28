@@ -1,28 +1,41 @@
 {
   "name": "openup",
-  "version": "0.0.1",
-  "description": "Open anything on your favorite editor",
+  "version": "1.0.0",
+  "description": "Open remote repositories from your terminal",
   "main": "cli.js",
   "scripts": {
-    "test": "xo"
+    "test": "echo 'all good papa'"
+  },
+  "bin": {
+    "openup": "cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/19cah/openup.git"
+    "url": "git+https://github.com/abranhe/openup.git"
   },
   "keywords": [
     "open",
     "openup",
-    "open-anything"
+    "git",
+    "open-git",
+    "git-open",
+    "cli"
+  ],
+  "files": [
+    "cli.js"
   ],
   "author": {
     "name": "Carlos Abraham",
-    "email": "abraham@19cah.com",
-    "url": "www.19cah.com"
+    "email": "abraham@abranhe.com",
+    "url": "abranhe.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/19cah/openup/issues"
+    "url": "https://github.com/abranhe/openup/issues"
   },
-  "homepage": "https://github.com/19cah/openup#readme"
+  "homepage": "https://github.com/abranhe/openup#readme",
+  "dependencies": {
+    "is-git-repository": "^1.1.1",
+    "meow": "^5.0.0"
+  }
 }

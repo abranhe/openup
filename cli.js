@@ -1,24 +1,39 @@
 #!/usr/bin/env node
-
 'use strict';
+const exec = require('child_process');
+const isGit = require('is-git-repository');
+const meow = require('meow');
 
-require('./editors/netbeans')();
+const cli = meow(`
+	Usage:
 
-const pkgVersion = require('./package').version;
+	  $ openup
 
-const args = process.argv.slice(2);
+  Flags:
 
-switch (args[0]) {
-	case 'netbeans':
-		netbeans(args[0]);
-		break;
-	default:
-		console.log('not working');
+	  -h, --help        Show help message and close
+	  -v, --version     View package version
+`, {
+	flags: {
+		help: {
+			type: 'boolean',
+			alias: 'h'
+		},
+		version: {
+			type: 'boolean',
+			alias: 'v'
+		}
+	}
+});
 
-}
+const open = () => {
+	exec.exec(`git remote -v | awk '/origin.*push/ {print $2}' | xargs open`, (error, stdout, stderr) => {
+		console.log(`${stdout}`);
+		console.log(`${stderr}`);
+		if (error !== null) {
+			console.log(`exec error: ${error}`);
+		}
+	})
+};
 
-
-// function openURL(url) {
-// 	const start = (process.platform === 'darwin' ? 'open' : process.platform === 'win32' ? 'start' : 'xdg-open');
-// 	require('child_process').exec(start + ' ' + url);
-// }
+isGit() ? open() : console.log('The directory isn\'t a git repository :(');
