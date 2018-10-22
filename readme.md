@@ -44,4 +44,4 @@ Open remote repositories from your terminal
 
 ## License
 
-[MIT](https://github.com/abranhe/openup/blob/master/LICENSE) License © [Carlos Abraham](https://github.com/abranhe/openup)
+[MIT](https://github.com/abranhe/openup/blob/master/license) License © [Carlos Abraham](https://github.com/abranhe/openup)
