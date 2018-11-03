@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://www.npmjs.com/package/openup"><img src="https://cdn.abranhe.com/projects/openup/logo.png"></a>
+<a href="https://npmjs.com/package/openup"><img src="https://cdn.abranhe.com/projects/openup/logo.png"></a>
 	<br>
 	<br>
 	<a href="https://www.npmjs.com/package/openup">𝘖𝘗𝘌𝘕𝘜𝘗</a>: open remote repositories from your terminal
@@ -34,6 +34,10 @@ Open remote repositories from your terminal
     -v, --version     View package version
 
 ```
+
+## Related
+
+- [open-on-npm](https://github.com/abranhe/open-on-npm): Open npm packages on the npmjs.com registry.
 
 ## Team
 
