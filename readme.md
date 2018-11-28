@@ -2,7 +2,7 @@
 <a href="https://npmjs.com/package/openup"><img src="https://cdn.abranhe.com/projects/openup/logo.png"></a>
 	<br>
 	<br>
-	<a href="https://www.npmjs.com/package/openup">𝘖𝘗𝘌𝘕𝘜𝘗</a>: open remote repositories from your terminal
+	<a href="https://npmjs.com/package/openup">𝘖𝘗𝘌𝘕𝘜𝘗</a>: open remote repositories from your terminal
   <br>
   <br>
   <a href="https://travis-ci.org/abranhe/openup"><img src="https://img.shields.io/travis/abranhe/openup.svg?logo=travis" /></a>
