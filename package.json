@@ -1,41 +1,43 @@
 {
-  "name": "openup",
-  "version": "1.0.0",
-  "description": "Open remote repositories from your terminal",
-  "main": "cli.js",
-  "scripts": {
-    "test": "echo 'all good papa'"
-  },
-  "bin": {
-    "openup": "cli.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/abranhe/openup.git"
-  },
-  "keywords": [
-    "open",
-    "openup",
-    "git",
-    "open-git",
-    "git-open",
-    "cli"
-  ],
-  "files": [
-    "cli.js"
-  ],
-  "author": {
-    "name": "Carlos Abraham",
-    "email": "abraham@abranhe.com",
-    "url": "abranhe.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/abranhe/openup/issues"
-  },
-  "homepage": "https://github.com/abranhe/openup#readme",
-  "dependencies": {
-    "is-git-repository": "^1.1.1",
-    "meow": "^5.0.0"
-  }
+	"name": "openup",
+	"version": "2.0.0",
+	"description": "Open remote repositories from your terminal",
+	"license": "MIT",
+	"repository": "abranhe/openup",
+	"author": {
+		"name": "Abraham Hernandez",
+		"email": "abraham@abranhe.com",
+		"url": "https://abranhe.com"
+	},
+	"type": "module",
+	"bin": {
+		"openup": "cli.js"
+	},
+	"keywords": [
+		"open",
+		"openup",
+		"git",
+		"open-git",
+		"git-open",
+		"cli"
+	],
+	"engines": {
+		"node": ">=14.13"
+	},
+	"scripts": {
+		"test": "xo"
+	},
+	"files": [
+		"cli.js"
+	],
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"git-remote-origin-url": "^4.0.0",
+		"is-git-repository": "^1.1.1",
+		"meow": "^10.0.1",
+		"open": "^8.2.1"
+	},
+	"devDependencies": {
+		"xo": "^0.44.0"
+	}
 }
