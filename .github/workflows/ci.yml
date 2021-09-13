@@ -6,16 +6,15 @@ jobs:
     name: Node.js ${{ matrix.node_version }}
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        node_version: [8, 10, 12]
-
+        node-version:
+          - 16
+          - 14
     steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          version: ${{ matrix.node_version }}
-      - name: Test
-        run: |
-          npm install
-          npm test
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm test
