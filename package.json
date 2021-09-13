@@ -33,7 +33,7 @@
 	"dependencies": {
 		"chalk": "^4.1.2",
 		"git-remote-origin-url": "^4.0.0",
-		"is-git-repository": "^1.1.1",
+		"is-git-repository": "^2.0.0",
 		"meow": "^10.0.1",
 		"open": "^8.2.1"
 	},
