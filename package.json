@@ -1,6 +1,6 @@
 {
 	"name": "openup",
-	"version": "2.0.3",
+	"version": "2.0.4",
 	"description": "Open remote repositories from your terminal",
 	"license": "MIT",
 	"repository": "abranhe/openup",

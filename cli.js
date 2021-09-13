@@ -40,8 +40,7 @@ if (!isGitRepo()) {
 	const repoUrl = await gitRemoteOriginUrl();
 
 	// Cloned repo with SSH
-	const url = repoUrl.includes('git@') ? repoUrl.replace('git@', 'https://').replace(':', '/') : repoUrl;
+	const url = repoUrl.includes('git@') ? repoUrl.replace(':', '/').replace('git@', 'https://') : repoUrl;
 
-	console.log(chalk.green(`Opening ${url}`));
 	await open(url);
 })();
