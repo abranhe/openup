@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-'use strict';
-const exec = require('child_process');
-const isGit = require('is-git-repository');
-const meow = require('meow');
+import meow from 'meow';
+import open from 'open';
+import chalk from 'chalk';
+import isGitRepo from 'is-git-repository';
+import gitRemoteOriginUrl from 'git-remote-origin-url';
 
-const cli = meow(`
+meow(`
 	Usage:
 
 	  $ openup
@@ -14,26 +15,32 @@ const cli = meow(`
 	  -h, --help        Show help message and close
 	  -v, --version     View package version
 `, {
+	importMeta: import.meta,
 	flags: {
 		help: {
 			type: 'boolean',
-			alias: 'h'
+			alias: 'h',
 		},
 		version: {
 			type: 'boolean',
-			alias: 'v'
-		}
-	}
+			alias: 'v',
+		},
+	},
 });
 
-const open = () => {
-	exec.exec(`git remote -v | awk '/origin.*push/ {print $2}' | xargs open`, (error, stdout, stderr) => {
-		console.log(`${stdout}`);
-		console.log(`${stderr}`);
-		if (error !== null) {
-			console.log(`exec error: ${error}`);
-		}
-	})
-};
+// Exit if not a git repo
+if (!isGitRepo()) {
+	console.log(chalk.red('Not a git repository'));
 
-isGit() ? open() : console.log('The directory isn\'t a git repository :(');
+	// eslint-disable-next-line node/prefer-global/process
+	process.exit(1);
+}
+
+(async () => {
+	const repoUrl = await gitRemoteOriginUrl();
+
+	// Cloned repo with SSH
+	const url = repoUrl.includes('git@') ? repoUrl.replace('git@', 'https://') : repoUrl;
+
+	await open(url);
+})();
