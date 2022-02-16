@@ -31,7 +31,7 @@
 		"cli.js"
 	],
 	"dependencies": {
-		"chalk": "^4.1.2",
+		"chalk": "^5.0.0",
 		"git-remote-origin-url": "^4.0.0",
 		"is-git-repository": "^2.0.0",
 		"meow": "^10.0.1",
