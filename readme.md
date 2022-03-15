@@ -1,18 +1,28 @@
-<div align="center">
-<a href="https://npmjs.com/package/openup"><img src="https://cdn.abranhe.com/projects/openup/logo.png"></a>
-	<br>
-	<br>
-	Open remote repositories from your terminal
-  <br>
-  <br>
-  <a href="https://github.com/abranhe/openup/blob/master/LICENSE"><img src="https://img.shields.io/github/license/abranhe/openup.svg" /></a>
-  <a href="https://github.com/abranhe/openup/actions"><img src="https://github.com/abranhe/openup/workflows/build/badge.svg" /></a>
+<div>
+  <a href="https://npmjs.com/package/openup">
+    <img width=250" src="https://cdn.abranhe.com/projects/openup/logo.png"/>
+  </a>
+  <br />
+  <br />
 </div>
+
+
+[![status](https://github.com/abranhe/openup/workflows/build/badge.svg)](https://github.com/abranhe/openup/actions)
+[![npm](https://img.shields.io/npm/v/openup)](https://npmjs.org/openup)
+[![license](https://img.shields.io/npm/l/openup)](https://npmjs.org/openup)
+
+> Open remote repositories from your terminal
 
 ## Install
 
+```bash
+$ npm install -g openup
 ```
-$ npm install openup
+
+or inside a repo just 
+
+```bash
+$ npx openup
 ```
 
 ## CLI
@@ -22,12 +32,12 @@ Open remote repositories from your terminal
 
 Usage:
 
-	$ openup
+  $ openup
 
-	Flags:
+Flags:
 
-	-h, --help        Show help message and close
-	-v, --version     View package version
+  -h, --help        Show help message and close
+  -v, --version     View package version
 ```
 
 ## Related
